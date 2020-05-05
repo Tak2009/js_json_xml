@@ -1,0 +1,19 @@
+{
+  "name": "js_json_xml",
+  "version": "1.0.0",
+  "description": "free formatter https://www.freeformatter.com/json-to-xml-converter.html#ad-output",
+  "main": "index_json.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tak2009/js_json_xml.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tak2009/js_json_xml/issues"
+  },
+  "homepage": "https://github.com/Tak2009/js_json_xml#readme"
+}
