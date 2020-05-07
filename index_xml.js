@@ -7,7 +7,7 @@ request.send();
 
 request.onload = () => {
 const heroesGeneralInfo = request.responseXML.documentElement;
-const heroesList = heroesGeneralInfo.getElementsByTagName("members");
+const heroesList = heroesGeneralInfo.getElementsByTagName("member");
 
 // debugger
 populateHeader(heroesGeneralInfo);
@@ -27,31 +27,32 @@ header.appendChild(myPara);
 }
 
 const showHeroes = (heroesList) => {
-  debugger
+  // debugger
   for (let i = 0; i < heroesList.length; i++) {
     const myArticle = document.createElement('article');
     const myH2 = document.createElement('h2');
     const myPara1 = document.createElement('p');
     const myPara2 = document.createElement('p');
     const myPara3 = document.createElement('p');
-    const heroDetails = document.createElement('ul');
+    const myPowers = document.createElement('ul');
 
-    myH2.textContent = heroesList[i].getElementsByTagName("formed"); //heroes[i].name;
-    myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
-    myPara2.textContent = 'Age: ' + heroes[i].age;
+    myH2.textContent = heroesList[i].getElementsByTagName("name")[0].firstChild.nodeValue;
+    myPara1.textContent = 'Secret identity: ' + heroesList[i].getElementsByTagName("secretIdentity")[0].firstChild.nodeValue;
+    myPara2.textContent = `Age: ${heroesList[i].getElementsByTagName("age")[0].firstChild.nodeValue}`;
     myPara3.textContent = 'Superpowers:';
-      
-    const superPowers = heroes[i].powers;
-    for (const j = 0; j < superPowers.length; j++) {
-      const heroesGeneralInfoItem = document.createElement('li');
-      heroesGeneralInfoItem.textContent = superPowers[j];
-      myheroesGeneralInfo.appendChild(heroesGeneralInfoItem);
+    // debugger
+    const powers = heroesList[i].getElementsByTagName("power");
+    for (let j = 0; j < powers.length; j++) {
+      // debugger
+      const power = document.createElement('li');
+      power.textContent = powers[j].firstChild.nodeValue;
+      myPowers.appendChild(power);
     }
     myArticle.appendChild(myH2);
     myArticle.appendChild(myPara1);
     myArticle.appendChild(myPara2);
     myArticle.appendChild(myPara3);
-    myArticle.appendChild(myheroesGeneralInfo);
+    myArticle.appendChild(myPowers);
 
     section.appendChild(myArticle);
   }

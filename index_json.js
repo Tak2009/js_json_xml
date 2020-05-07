@@ -21,23 +21,23 @@ header.appendChild(myPara);
 }
 
 const showHeroes = (jsonObj) => {
-var heroes = jsonObj['members'];
-for (var i = 0; i < heroes.length; i++) {
-var myArticle = document.createElement('article');
-var myH2 = document.createElement('h2');
-var myPara1 = document.createElement('p');
-var myPara2 = document.createElement('p');
-var myPara3 = document.createElement('p');
-var myList = document.createElement('ul');
+const heroes = jsonObj['members'];
+for (let i = 0; i < heroes.length; i++) {
+const myArticle = document.createElement('article');
+const myH2 = document.createElement('h2');
+const myPara1 = document.createElement('p');
+const myPara2 = document.createElement('p');
+const myPara3 = document.createElement('p');
+const myList = document.createElement('ul');
 
 myH2.textContent = heroes[i]['name']; //heroes[i].name;
 myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
 myPara2.textContent = 'Age: ' + heroes[i].age;
 myPara3.textContent = 'Superpowers:';
     
-var superPowers = heroes[i].powers;
-for (var j = 0; j < superPowers.length; j++) {
-  var listItem = document.createElement('li');
+const superPowers = heroes[i].powers;
+for (let j = 0; j < superPowers.length; j++) {
+  const listItem = document.createElement('li');
   listItem.textContent = superPowers[j];
   myList.appendChild(listItem);
 }
