@@ -6,7 +6,7 @@
    <formed>2016</formed>
    <homeTown>Metro City</homeTown>
    <members>
-      <element>
+      <member>
          <age>29</age>
          <name>Molecule Man</name>
          <powers>
@@ -15,8 +15,8 @@
             <element>Radiation blast</element>
          </powers>
          <secretIdentity>Dan Jukes</secretIdentity>
-      </element>
-      <element>
+      </member>
+      <member>
          <age>39</age>
          <name>Madame Uppercut</name>
          <powers>
@@ -25,8 +25,8 @@
             <element>Superhuman reflexes</element>
          </powers>
          <secretIdentity>Jane Wilson</secretIdentity>
-      </element>
-      <element>
+      </member>
+      <member>
          <age>1000000</age>
          <name>Eternal Flame</name>
          <powers>
@@ -37,6 +37,6 @@
             <element>Interdimensional travel</element>
          </powers>
          <secretIdentity>Unknown</secretIdentity>
-      </element>
+      </member>
    </members>
 </root>
