@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
    <active>true</active>
+   <secretBase>Super tower</secretBase>
+   <squadName>Super Hero Squad</squadName>
    <formed>2016</formed>
    <homeTown>Metro City</homeTown>
    <members>
@@ -37,6 +39,4 @@
          <secretIdentity>Unknown</secretIdentity>
       </element>
    </members>
-   <secretBase>Super tower</secretBase>
-   <squadName>Super Hero Squad</squadName>
 </root>

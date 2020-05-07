@@ -5,22 +5,22 @@ const request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
-request.onload = () => {
+request.onload = function() {
 const superHeroes = request.response;
 populateHeader(superHeroes);
 showHeroes(superHeroes);
 }
 
-const populateHeader = (jsonObj) => {
-const myH1 = document.createElement('h1');
+function populateHeader(jsonObj) {
+var myH1 = document.createElement('h1');
 myH1.textContent = jsonObj['squadName'];
 header.appendChild(myH1);
-const myPara = document.createElement('p');
+var myPara = document.createElement('p');
 myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
 header.appendChild(myPara);
 }
 
-const showHeroes = (jsonObj) => {
+function showHeroes(jsonObj) {
 var heroes = jsonObj['members'];
 for (var i = 0; i < heroes.length; i++) {
 var myArticle = document.createElement('article');
