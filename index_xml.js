@@ -12,18 +12,15 @@ populateHeader(heroesGeneralInfo);
 }
 
 const populateHeader = (heroesGeneralInfo) => {
-
 const myH1 = document.createElement('h1');
 const squadName = heroesGeneralInfo.getElementsByTagName("squadName");
-// myH1.textContent = squadName[0].textContent
-myH1.textContent = squadName[0].firstChild.nodeValue
+myH1.textContent = squadName[0].firstChild.nodeValue // myH1.textContent = squadName[0].textContent
 header.appendChild(myH1);
-
-// const myPara = document.createElement('p');
-// const townNodes = list.getElementsByTagName("homeTown");
-
-// myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
-// header.appendChild(myPara);
+const myPara = document.createElement('p');
+const homeTownNodes = heroesGeneralInfo.getElementsByTagName("homeTown");
+const formedNodes = heroesGeneralInfo.getElementsByTagName("formed");
+myPara.textContent = 'Hometown: ' + homeTownNodes[0].firstChild.nodeValue + ' // Formed: ' + formedNodes[0].firstChild.nodeValue;
+header.appendChild(myPara);
 }
 
   //   function showHeroes(jsonObj) {
@@ -35,7 +32,7 @@ header.appendChild(myH1);
   //   var myPara1 = document.createElement('p');
   //   var myPara2 = document.createElement('p');
   //   var myPara3 = document.createElement('p');
-  //   var myList = document.createElement('ul');
+  //   var myheroesGeneralInfo = document.createElement('ul');
 
   //   myH2.textContent = heroes[i]['name']; //heroes[i].name;
   //   myPara1.textContent = 'Secret identity: ' + heroes[i].secretIdentity;
@@ -44,16 +41,16 @@ header.appendChild(myH1);
         
   //   var superPowers = heroes[i].powers;
   //   for (var j = 0; j < superPowers.length; j++) {
-  //     var listItem = document.createElement('li');
-  //     listItem.textContent = superPowers[j];
-  //     myList.appendChild(listItem);
+  //     var heroesGeneralInfoItem = document.createElement('li');
+  //     heroesGeneralInfoItem.textContent = superPowers[j];
+  //     myheroesGeneralInfo.appendChild(heroesGeneralInfoItem);
   //   }
 
   //   myArticle.appendChild(myH2);
   //   myArticle.appendChild(myPara1);
   //   myArticle.appendChild(myPara2);
   //   myArticle.appendChild(myPara3);
-  //   myArticle.appendChild(myList);
+  //   myArticle.appendChild(myheroesGeneralInfo);
 
   //   section.appendChild(myArticle);
   //   }
